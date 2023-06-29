@@ -1,9 +1,10 @@
+import ArrayComponent from "./components/Array";
 import ConditionalRendering from "./components/ConditionalRendering";
 
 const App = () => {
   return (
     <>
-      <ConditionalRendering />
+      <ArrayComponent />
     </>
   );
 };

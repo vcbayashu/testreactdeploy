@@ -7,14 +7,18 @@ const ConditionalRendering = () => {
     <>
       <h1>enthuashu </h1>
       {isVerified ? (
-        <p>
-          enthuashu is verified
-          <VerifiedIcon sx={{ backgroundColor: "blue" }} />
-        </p>
-      ) : null}
+        <>
+          <p>
+            enthuashu is verified
+            <VerifiedIcon sx={{ backgroundColor: "blue" }} />
+          </p>
+        </>
+      ) : (
+        <></>
+      )}
 
-      <button onClick={() => setisVerified(true)} type="button">
-        Verify enthuashu
+      <button onClick={() => setisVerified(!isVerified)} type="button">
+        {isVerified ? "deverify enthuashu" : "Verify enthuashu"}
       </button>
     </>
   );
