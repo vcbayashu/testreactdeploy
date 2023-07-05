@@ -38,12 +38,13 @@ const ArrayComponent = () => {
     <>
       <p>This is the list of fruits</p>
       <ul>
-        <li>{fruits[0]} </li>
-        <li>{fruits[1]}</li>
-        <li>{fruits[2]}</li>
-        <li>{fruits[3]}</li>
-        <li>{fruits[4]}</li>
-        <li>{fruits[5]}</li>
+        {fruits.map((v) => {
+          return (
+            <>
+              <li> {v} </li>
+            </>
+          );
+        })}
       </ul>
       <button onClick={() => handleShuffle()} type="button">
         Shuffle Fruits
